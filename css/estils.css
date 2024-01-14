@@ -386,6 +386,14 @@ Estils figures
     }
 }
 
+
+@media (min-width: 992px) {
+    .topics-container figure {
+        max-width: 20%;
+        height: auto;
+    }
+}
+
 figcaption {
     font-size: 0.6rem;
 }
