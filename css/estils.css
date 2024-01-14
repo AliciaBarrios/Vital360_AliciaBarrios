@@ -46,20 +46,13 @@ main {
 
 @media (min-width: 992px) {
     .container {
-        max-width: 65vw;
+        max-width: 60vw;
     }
 }
 
 .logo {
     width: 80%;
     height: auto;
-}
-
-@media (min-width: 992px) {
-    .logo {
-        width: 60%;
-        height: auto;
-    }
 }
 
 /*********************************
@@ -93,6 +86,7 @@ nav {
 nav ul li {
     display: inline-block;
     padding: 0 0.5rem;
+    font-size: 1.2rem;
 }
 
 nav a {
@@ -151,7 +145,7 @@ footer > div,
         display: flex;
         flex-direction: row;
         align-items: end;
-        margin-top: 0.5rem;
+        margin-top: 1rem;
     }
 
     footer > div {
@@ -174,11 +168,6 @@ footer div p {
         padding-left: 0.9rem;
         border-left: 1px solid white;
     }
-
-    .icon {
-        width: 80%;
-        height: auto;
-    }
 }
 
 .legal-links a {
@@ -194,7 +183,7 @@ footer div p {
 Estils textos
 *************/
 .home h1 {
-    font-size: 2.5rem;
+    font-size: 3.7rem;
     font-weight: 900;
     width: 90vw;
     margin: 0 auto;
@@ -203,7 +192,7 @@ Estils textos
 
 h1,
 .home h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 600;
     font-family: var(--serif);
     margin: 3rem 0;
@@ -211,76 +200,75 @@ h1,
 
 h2,
 .home h3 {
-    font-size: 1.5rem;
+    font-size: 2.3rem;
     font-weight: 600;
     font-family: var(--serif);
     margin-top: 0.5rem;
 }
 
 h3 {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     font-weight: 700;
     font-family: var(--sans-serif);
 }
 
 h4 {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-weight: 600;
     font-family: var(--serif);
-}
-
-.font-size-l {
-    font-size: 1.2rem;
+    margin-bottom: 0.5rem
 }
 
 p,
 .entrada ul li,
 .entrada ol li {
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     padding: 0.5rem 0;
     line-height: 1.5;
 }
 
 blockquote,
 .blockquote-container cite {
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     padding-bottom: 0.75rem;
 }
 
-.font-size-s-mobil {
-    font-size: 0.75rem;
+.font-size-l {
+    font-size: 1.5rem;
+}
+
+.font-size-s {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.font-size-xs {
+    font-size: 1rem;
     font-weight: 300;
 }
 
 /*Modificació de mides de text perque sigui responsive*/
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     .home h1 {
-        font-size: 2.9rem;
-        max-width: 40vw;
-        margin: 0;
+        font-size: 2.8rem;
     }
 
     h1,
     .home h2 {
-        font-size: 2rem;
+        font-size: 2.4rem;
     }
 
-    .blog h2,
-    .videos h2 {
-        line-height: 1;
+    h2,
+    .home h3 {
+        font-size: 1.5rem;
     }
 
-    .blog h2 a,
-    .videos h2 {
-        font-size: 1.2rem;
-    }
-
-    aside h3 {
+    h3 {
         font-size: 1.4rem;
     }
-
+    
     h4 {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     p,
@@ -290,18 +278,78 @@ blockquote,
     }
 
     blockquote {
-        font-size: 1.3rem;
+        font-size: 1rem;
         line-height: 1.5;
+    }
+
+    .blockquote-container cite {
+        font-size: 1rem;
     }
 
     .font-size-s {
         font-size: 0.9rem;
     }
-    
-    .font-size-xs {
-        font-size: 0.7rem;
+}
+
+@media (min-width: 992px) {
+    .home h1 {
+        font-size: 4rem;
+        max-width: 40vw;
+        margin: 0;
+    }
+
+    h1,
+    .home h2 {
+        font-size: 2.7rem;
+    }
+
+    .blog h2,
+    .videos h2 {
+        line-height: 1.25;
+    }
+
+    h2,
+    .home h3 {
+        font-size: 1.9rem;
+    }
+
+    aside h3 {
+        font-size: 1.9rem;
+        font-weight: 900;
+    }
+
+    h4 {
+        font-size: 1.4rem;
+    }
+
+    p,
+    .entrada ul li,
+    .entrada ol li {
+        font-size: 1.4rem;
+    }
+
+    blockquote {
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
+
+    .blockquote-container cite {
+        font-size: 1.4rem;
+    }
+
+    a.categoria {
+        font-size: 1rem;
+    }
+
+    .font-size-s {
+        font-size: 1.1rem;
+    }
+
+    .font-size-l {
+        font-size: 1.6rem;
     }
 }
+
 /*****************
 ESTILS PÀGINA HOME
 *****************/
@@ -386,16 +434,8 @@ Estils figures
     }
 }
 
-
-@media (min-width: 992px) {
-    .topics-container figure {
-        max-width: 20%;
-        height: auto;
-    }
-}
-
 figcaption {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
 }
 
 /***************
@@ -452,7 +492,7 @@ a.button {
     border-radius: 5px;
     padding: 0.5rem 0.8rem;
     margin: 1rem 0;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     cursor: pointer;
     text-decoration: none;
 }
@@ -460,6 +500,25 @@ a.button {
 button:hover,
 a.button:hover {
     background-color: var(--dark-contrast-color);
+}
+
+@media (min-width: 768px) {
+    button,
+    a.button {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    button,
+    a.button {
+        font-size: 1.3rem;
+    }
+
+    button {
+        margin-top: 1.6rem;
+        margin-bottom: 5rem;
+    }
 }
 
 /*********************************************
@@ -492,13 +551,7 @@ ESTILS TARGETES - Pàgina Blog i Pàgina Entrada
     width: fit-content;
     align-self: flex-start;
     text-decoration: none;
-    font-size: 0.7rem;
-}
-
-@media (min-width: 992px) {
-    .card .label {
-        padding: 0.3rem;
-    }
+    font-size: 0.9rem;
 }
 
 .card .label:hover {
@@ -507,22 +560,36 @@ ESTILS TARGETES - Pàgina Blog i Pàgina Entrada
 
 .card .author {
     position: absolute;
-    top: 85%;
+    top: 89%;
     padding: 0.15rem 0.25rem;
     margin: 0.6rem;
     background-color: rgba(247, 247, 247, 0.55);
     width: fit-content;
     align-self: flex-end;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
+}
+
+@media (min-width: 768px) {
+    .card .author {
+        top: 84%;
+    }
+
+    .card .label {
+        font-size: 0.7rem;
+    }
 }
 
 @media (min-width: 992px) {
     .card.card-1 .author {
-        top: 91%;
+        top: 9%;
     }
 
     .card .author {
-        top: 82%;
+        top: 86%;
+    }
+
+    .card .label {
+        font-size: 1rem;
     }
 }
 
@@ -533,12 +600,18 @@ ESTILS TARGETES - Pàgina Blog i Pàgina Entrada
 .card .text-container cite {
     color: var(--secondari-color);
     font-style: normal;
-    font-size: 0.75rem;
+    font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+    .card .text-container cite {
+        font-size: 0.9rem;
+    }
 }
 
 @media (min-width: 992px) {
     .card .text-container cite {
-        font-size: 0.65rem;
+        font-size: 1rem;
     }
 }
 
@@ -569,7 +642,7 @@ nav.paginacio {
 }
 
 nav.paginacio li a {
-    padding: .5rem;
+    padding: .7rem;
     border: 1px solid var(--main-color);
     background-color: var(--light-color);
     color: var(--main-color);
@@ -626,13 +699,13 @@ nav.breadcrumb {
 
 @media (min-width: 992px) {
     nav.breadcrumb {
-        width: 65vw;
+        width: 60vw;
     }
 }
 
 nav.breadcrumb li {
     font-family: var(--sans-serif);
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     padding-left: 0.1rem;
     padding-right: 0;
 }    
@@ -656,9 +729,13 @@ abbr {
     text-decoration: none;
 }
 
+q {
+    quotes: none;
+}
+
 .entrada article ul,
 .entrada article ol {
-    padding-left: 1.3rem;
+    padding-left: 2rem;
 }
 
 .entrada article ul li {
@@ -693,10 +770,10 @@ abbr {
     color: var(--main-color);
     border: 1px solid var(--main-color);
     padding: 0.20rem;
-    margin-right: 0.5rem;
+    margin-right: 0.75rem;
     cursor: pointer;
     text-decoration: none;
-    font-size: 0.75rem;
+    font-size: 1rem;
 }
 
 .categoria:hover {
@@ -734,8 +811,13 @@ abbr {
         flex-wrap: wrap;
     }
 
+    .categoria {
+        padding: 0.5rem;
+    }
+
     .categories-container li {
         margin-bottom: 0.3rem;
+        margin-right: 0.5rem;
     }
 }
 
