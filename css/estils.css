@@ -86,7 +86,7 @@ nav {
 nav ul li {
     display: inline-block;
     padding: 0 0.5rem;
-    font-size: 1.2rem;
+    font-size: calc(1rem + 0.2vw);
 }
 
 nav a {
@@ -183,16 +183,23 @@ footer div p {
 Estils textos
 *************/
 .home h1 {
-    font-size: 3.7rem;
+    font-size: calc(2.5rem + 0.5vw);
     font-weight: 900;
     width: 90vw;
     margin: 0 auto;
     font-family: var(--sans-serif);
 }
 
+@media (min-width: 992px) {
+    .home h1 {
+        max-width: 30vw;
+        margin: 0;
+    }
+}
+
 h1,
 .home h2 {
-    font-size: 3rem;
+    font-size: calc(1.8rem + 0.7vw);
     font-weight: 600;
     font-family: var(--serif);
     margin: 3rem 0;
@@ -200,20 +207,20 @@ h1,
 
 h2,
 .home h3 {
-    font-size: 2.3rem;
+    font-size: calc(1.4rem + 0.25vw);
     font-weight: 600;
     font-family: var(--serif);
     margin-top: 0.5rem;
 }
 
 h3 {
-    font-size: 1.8rem;
+    font-size: calc(1.3rem + 1vw);
     font-weight: 700;
     font-family: var(--sans-serif);
 }
 
 h4 {
-    font-size: 1.6rem;
+    font-size: calc(1rem + 0.25vw);
     font-weight: 600;
     font-family: var(--serif);
     margin-bottom: 0.5rem
@@ -222,132 +229,37 @@ h4 {
 p,
 .entrada ul li,
 .entrada ol li {
-    font-size: 1.3rem;
+    font-size: calc(0.9rem + 0.3vw);
     padding: 0.5rem 0;
     line-height: 1.5;
 }
 
 blockquote,
 .blockquote-container cite {
-    font-size: 1.3rem;
+    font-size: calc(0.9rem + 0.25vw);
     padding-bottom: 0.75rem;
 }
 
+@media (min-width: 992px) {
+    blockquote {
+        font-size: 1.8rem;
+        line-height: 1.5;
+    }
+}
+
 .font-size-l {
-    font-size: 1.5rem;
+    font-size: calc(1.1rem + 0.75vw);
+    padding-bottom: 2.5rem;
+}
+
+.font-size-m {
+    font-size: calc(0.9rem + 0.25vw);
+    font-weight: 300;
 }
 
 .font-size-s {
-    font-size: 1.2rem;
+    font-size: calc(0.7rem + 0.25vw);
     font-weight: 300;
-}
-
-.font-size-xs {
-    font-size: 1rem;
-    font-weight: 300;
-}
-
-/*Modificació de mides de text perque sigui responsive*/
-@media (min-width: 768px) {
-    .home h1 {
-        font-size: 2.8rem;
-    }
-
-    h1,
-    .home h2 {
-        font-size: 2.4rem;
-    }
-
-    h2,
-    .home h3 {
-        font-size: 1.5rem;
-    }
-
-    h3 {
-        font-size: 1.4rem;
-    }
-    
-    h4 {
-        font-size: 1.1rem;
-    }
-
-    p,
-    .entrada ul li,
-    .entrada ol li {
-        font-size: 1rem;
-    }
-
-    blockquote {
-        font-size: 1rem;
-        line-height: 1.5;
-    }
-
-    .blockquote-container cite {
-        font-size: 1rem;
-    }
-
-    .font-size-s {
-        font-size: 0.9rem;
-    }
-}
-
-@media (min-width: 992px) {
-    .home h1 {
-        font-size: 4rem;
-        max-width: 40vw;
-        margin: 0;
-    }
-
-    h1,
-    .home h2 {
-        font-size: 2.7rem;
-    }
-
-    .blog h2,
-    .videos h2 {
-        line-height: 1.25;
-    }
-
-    h2,
-    .home h3 {
-        font-size: 1.9rem;
-    }
-
-    aside h3 {
-        font-size: 1.9rem;
-        font-weight: 900;
-    }
-
-    h4 {
-        font-size: 1.4rem;
-    }
-
-    p,
-    .entrada ul li,
-    .entrada ol li {
-        font-size: 1.4rem;
-    }
-
-    blockquote {
-        font-size: 1.6rem;
-        line-height: 1.5;
-    }
-
-    .blockquote-container cite {
-        font-size: 1.4rem;
-    }
-
-    a.categoria {
-        font-size: 1rem;
-    }
-
-    .font-size-s {
-        font-size: 1.1rem;
-    }
-
-    .font-size-l {
-        font-size: 1.6rem;
-    }
 }
 
 /*****************
@@ -427,21 +339,15 @@ Estils figures
     .topics-container .container:nth-child(even) div {
         padding-right: 2rem;
     }
-
-    .topics-container figure {
-        max-width: 30%;
-        height: auto;
-    }
 }
 
 figcaption {
-    font-size: 0.7rem;
+    font-size: calc(0.5rem + 0.4vw);
 }
 
 /***************
 Estils formulari
 ****************/
-
 form .display-column li {
     display: flex;
     flex-direction: column;
@@ -451,7 +357,6 @@ form .display-column li {
     form {
         max-width: 70vw;
     }
-
 }
 
 @media (min-width: 992px) {
@@ -459,6 +364,7 @@ form .display-column li {
         display: flex;
         justify-content: space-around;
     }
+
     form {
         max-width: 50%;
         margin-left: 3rem;
@@ -475,13 +381,15 @@ form .display-column li {
 }
 
 label {
-    font-weight: 700;
+    font-weight: 400;
+    font-size: calc(0.9rem + 0.3vw); 
 }
 
 input {
     margin: 0.5rem 0;
     padding: 0.4rem;
     border: solid 1px var(--light-contrast-color);
+    font-size: calc(0.9rem + 0.3vw); 
 }
 
 button,
@@ -492,7 +400,7 @@ a.button {
     border-radius: 5px;
     padding: 0.5rem 0.8rem;
     margin: 1rem 0;
-    font-size: 1.1rem;
+    font-size: calc(0.9rem + 0.25vw); 
     cursor: pointer;
     text-decoration: none;
 }
@@ -502,19 +410,7 @@ a.button:hover {
     background-color: var(--dark-contrast-color);
 }
 
-@media (min-width: 768px) {
-    button,
-    a.button {
-        font-size: 1rem;
-    }
-}
-
 @media (min-width: 992px) {
-    button,
-    a.button {
-        font-size: 1.3rem;
-    }
-
     button {
         margin-top: 1.6rem;
         margin-bottom: 5rem;
@@ -551,7 +447,7 @@ ESTILS TARGETES - Pàgina Blog i Pàgina Entrada
     width: fit-content;
     align-self: flex-start;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: calc(0.6rem + 0.25vw);
 }
 
 .card .label:hover {
@@ -560,36 +456,28 @@ ESTILS TARGETES - Pàgina Blog i Pàgina Entrada
 
 .card .author {
     position: absolute;
-    top: 89%;
+    top: 84%;
     padding: 0.15rem 0.25rem;
     margin: 0.6rem;
     background-color: rgba(247, 247, 247, 0.55);
     width: fit-content;
     align-self: flex-end;
-    font-size: 0.7rem;
+    font-size: calc(0.6rem + 0.25vw);
 }
 
 @media (min-width: 768px) {
     .card .author {
-        top: 84%;
-    }
-
-    .card .label {
-        font-size: 0.7rem;
+        top: 80%;
     }
 }
 
 @media (min-width: 992px) {
     .card.card-1 .author {
-        top: 9%;
+        top: 92%;
     }
 
     .card .author {
-        top: 86%;
-    }
-
-    .card .label {
-        font-size: 1rem;
+        top: 84%;
     }
 }
 
@@ -600,19 +488,7 @@ ESTILS TARGETES - Pàgina Blog i Pàgina Entrada
 .card .text-container cite {
     color: var(--secondari-color);
     font-style: normal;
-    font-size: 1.2rem;
-}
-
-@media (min-width: 768px) {
-    .card .text-container cite {
-        font-size: 0.9rem;
-    }
-}
-
-@media (min-width: 992px) {
-    .card .text-container cite {
-        font-size: 1rem;
-    }
+    font-size: calc(0.6rem + 0.4vw);
 }
 
 .titular,
@@ -660,7 +536,7 @@ nav.paginacio li a:hover {
 @media (min-width: 768px) {
     .blog .container {
         display: grid;
-        grid-template-columns: 47% 47%;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: 0.15fr 1fr 1fr 1fr 1fr;
         grid-gap: 1rem 2.5rem;
     }
@@ -674,7 +550,7 @@ nav.paginacio li a:hover {
     .blog .container {
         max-width: 100vw;
         display: grid;
-        grid-template-columns: 23% 23% 23% 23%;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 0.15fr 1fr 0.75fr;
         grid-gap: 1rem 2rem;
     }
@@ -761,7 +637,7 @@ q {
 .categories-container {
     display: flex;
     flex-direction: row;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     margin-bottom: 5rem;
 }
 
@@ -773,7 +649,7 @@ q {
     margin-right: 0.75rem;
     cursor: pointer;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: calc(0.5rem + 0.5vw);
 }
 
 .categoria:hover {
@@ -797,7 +673,7 @@ q {
 @media (min-width: 992px) {
     .entrada .container {
         display: grid;
-        grid-template-columns: 65% 35%;
+        grid-template-columns: 2fr 1fr;
         grid-gap: 0 2rem;
     }
 
@@ -824,7 +700,6 @@ q {
 /****************
 VÍDEOS RESPONSIVE
 *****************/
-
 iframe.video-fluid {
     width: 100%;
     height: auto;
@@ -836,7 +711,7 @@ iframe.video-fluid {
 @media (min-width: 768px) {
     .videos .container {
         display: grid;
-        grid-template-columns: 48% 48%;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: 0.15fr 1fr 1fr 1fr;
         grid-gap: 1.5rem;
     }
