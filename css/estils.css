@@ -609,6 +609,10 @@ q {
     quotes: none;
 }
 
+.entrada section h2 {
+    margin: 0.75rem 0;
+}
+
 .entrada article ul,
 .entrada article ol {
     padding-left: 2rem;
