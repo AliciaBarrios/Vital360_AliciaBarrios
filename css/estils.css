@@ -28,10 +28,6 @@ body {
     background-color: var(--bg-body-color);
 }
 
-main {
-    padding-top: 70px;
-}
-
 .container {
     width: 90vw;
     margin: 0 auto;
@@ -48,6 +44,19 @@ main {
     .container {
         max-width: 60vw;
     }
+}
+
+a {
+    text-decoration-style: dotted;
+    color: var(--dark-contrast-color);
+}
+
+a:hover {
+    color: var(--main-color);
+}
+
+ul li {
+    list-style: none;
 }
 
 .logo {
@@ -76,6 +85,10 @@ header {
     header {
         padding: 1rem 4rem;
     }
+}
+
+main {
+    padding-top: 90px;
 }
 
 nav {
@@ -282,19 +295,6 @@ ESTILS PÀGINA HOME
 .home .topics-container p {
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
-}
-
-a {
-    text-decoration-style: dotted;
-    color: var(--dark-contrast-color);
-}
-
-a:hover {
-    color: var(--main-color);
-}
-
-ul li {
-    list-style: none;
 }
 
 /*************
